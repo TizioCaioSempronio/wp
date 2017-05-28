@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
 <div class="row">
-<div class="col-md-12 welcome">
-	<h1>IsoladelTurismo</h1>
-	<h4>Il sito del turismo in Sardegna</h4>
-</div>
-</div>      </div>
-</div>
+	<div class="col-md-12 welcome">
+		<h1><?php blog_info(name) ?></h1>
+		<h4><?php blog_info(description) ?>	</h4>
+	</div>
+</div>      
+
 <div class="row" id="contact">
 	<div class="col-lg-12 text-center">
 		<h2>Contattaci!</h2>
@@ -52,6 +52,6 @@
 			</div>
 		</div>
 	</div>
-
+</form>
 
 <?php get_footer(); ?>
