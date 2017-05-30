@@ -1,14 +1,18 @@
-$(document).ready(function(){
-	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
+$(function(){
+	'use strict';
 
-	    var target = this.hash;
-	    var $target = $(target);
+	$("li a[href^='#']").on('click', function(e))	
 
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 900, 'swing', function () {
-	        window.location.hash = target;
+	    var hash = this.hash;
+	   
+
+	    $('html, body').animate({
+	        'scrollTop': $(hash).offset().top
+	    }, 900, function () {
+
+	    	// when done, add hash to url
+	    	// (default click behaviour)
+	        window.location.hash = hash;
 	    });
 	});
-});
+};
